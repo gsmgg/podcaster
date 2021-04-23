@@ -19,4 +19,12 @@
         margin-left: auto;
         text-transform: capitalize;
     }
+
+    @media(max-width: 720px) {
+        padding: 2rem 0rem;
+        justify-content: center;
+        p, span {
+            display: none;
+        }
+    }
 }
