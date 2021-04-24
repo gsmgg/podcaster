@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +12,7 @@
   --gray-200: #afb2b1;
   --gray-500: #808080;
   --gray-800: #494d4b;
+  --gray-900: #303030;
 
   --green-500: #04d361;
 
@@ -57,10 +57,15 @@ button {
   color: var(--gray-500);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    font-family: Lexend, sans-serif;
-    color: var(--gray-800);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  font-family: Lexend, sans-serif;
+  color: var(--gray-800);
 }
 
 h1 {
@@ -70,8 +75,6 @@ h1 {
 h2 {
   font-size: 1.5rem;
 }
-
-
 
 button {
   cursor: pointer;

@@ -1,39 +1,82 @@
 import { GetStaticProps } from "next";
-import { format, parseISO } from "date-fns";
-import ptBR from "date-fns/locale/pt-BR";
+import Image from "next/image";
 import { api } from "../services/api";
-import { convertDurationToTimeString } from "../utils/convertDurationToTimeString";
+import { formatEpisodes } from "../utils/formatEpisodes";
+import styles from "./home.module.scss";
 
-type Episodes = {
+export type Episodes = {
   id: string;
   title: string;
   members: string;
   published_at: string;
+  published_at_formated: string;
   thumbnail: string;
   description: string;
   file: {
     url: string;
     type: string;
     duration: number;
+    duration_formated: string;
   };
 };
 
 type HomeProps = {
-  episodes: Array<Episodes>;
+  latestEpisodes: Array<Episodes>;
+  allEpisodes: Array<Episodes>;
   // Isso equivale a Episodes[];
 };
 
 export default function Home(props: HomeProps) {
   return (
-    <>
-      <h1>Index</h1>
-      <code>{JSON.stringify(props.episodes)}</code>
-    </>
+    <div className={styles.homePage}>
+      <section className={styles.latestEpisodes}>
+        <h2>Novo episódio</h2>
+
+        <ul>
+          {props.latestEpisodes.map((episode) => {
+            return (
+              <li key={episode.id}>
+                <div className={styles.content}>
+                  <div className={styles.thumbnail}>
+                    <a href="">
+                      <Image
+                        width={192}
+                        height={192}
+                        src={episode.thumbnail}
+                        alt={episode.title}
+                        objectFit="cover"
+                      />
+                    </a>
+                  </div>
+
+                  <div className={styles.episodeDetails}>
+                    <a href="">{episode.title}</a>
+                    <p className={styles.members}>{episode.members}</p>
+
+                    <div className={styles.moreInfo}>
+                      <span>{episode.published_at_formated} </span>
+                      <span className={styles.divider}> | </span>
+                      <span> {episode.file.duration_formated}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="action">
+                  <button type="button">
+                    <img src="/play-green.svg" alt="Tocar episódio" />
+                  </button>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    </div>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await api.get("/episodes", {
+  const latestEpisodes = await api.get("/episodes", {
     params: {
       _limit: 1,
       _sort: "publishe_at",
@@ -41,33 +84,18 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   });
 
-  const episodes = data.map((episodes: Episodes) => {
-    return {
-      id: episodes.id,
-      title: episodes.title,
-      members: episodes.members,
-      published_at: episodes.published_at,
-      published_at_formated: format(
-        parseISO(episodes.published_at),
-        "d MMM yy",
-        { locale: ptBR }
-      ),
-      thumbnail: episodes.thumbnail,
-      description: episodes.description,
-      file: {
-        url: episodes.file.url,
-        type: episodes.file.type,
-        duration: Number(episodes.file.duration),
-        duration_formated: convertDurationToTimeString(
-          Number(episodes.file.duration)
-        ),
-      },
-    };
+  const allEpisodes = await api.get("/episodes", {
+    params: {
+      _limit: 8,
+      _sort: "publishe_at",
+      _order: "desc",
+    },
   });
 
   return {
     props: {
-      episodes: episodes,
+      latestEpisodes: formatEpisodes(latestEpisodes.data),
+      allEpisodes: formatEpisodes(allEpisodes.data),
     },
     revalidate: 60 * 60 * 8,
   };
