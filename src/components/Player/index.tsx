@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import { Draggable } from "../../pages/Draggable";
+import { Droppable } from "../../pages/Droppable";
 import styles from "./styles.module.scss";
 
 export function Player() {
@@ -10,7 +13,9 @@ export function Player() {
 
       <div className={styles.emptyPlayer}>
         <p>
-          Selecione um <strong>podecaster</strong> para ser ouvido
+          <Droppable>
+            Selecione um <strong>podecaster</strong> para ser ouvido
+          </Droppable>
         </p>
       </div>
 
@@ -33,7 +38,7 @@ export function Player() {
           <button type="button" className={styles.playButton}>
             <img src="/play.svg" alt="Tocar" />
           </button>
-          <button type="button" >
+          <button type="button">
             <img src="/play-next.svg" alt="Tocar próxima" />
           </button>
           <button type="button">

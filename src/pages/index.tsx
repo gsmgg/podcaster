@@ -1,7 +1,9 @@
 import { GetStaticProps } from "next";
 import Image from "next/image";
+import React, { useState } from "react";
 import { api } from "../services/api";
 import { formatEpisodes } from "../utils/formatEpisodes";
+import { Draggable } from "./Draggable";
 import styles from "./home.module.scss";
 
 export type Episodes = {
@@ -29,6 +31,10 @@ type HomeProps = {
 export default function Home(props: HomeProps) {
   return (
     <div className={styles.homePage}>
+      <section>
+        <h1>Teste dnd</h1>
+      </section>
+
       <section className={styles.latestEpisodes}>
         <h2>Novo episódio</h2>
 
@@ -77,12 +83,14 @@ export default function Home(props: HomeProps) {
 
         <table cellSpacing={8}>
           <thead>
-            <th></th>
-            <th>Podcast</th>
-            <th>Integrantes</th>
-            <th>Data</th>
-            <th>Duração</th>
-            <th></th>
+            <tr>
+              <th></th>
+              <th>Podcast</th>
+              <th>Integrantes</th>
+              <th>Data</th>
+              <th>Duração</th>
+              <th></th>
+            </tr>
           </thead>
           <tbody>
             {props.allEpisodes.map((episode) => {
