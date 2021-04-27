@@ -1,6 +1,6 @@
 import { format, parseISO } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import { Episodes } from "../pages";
+import { Episodes } from "../types/episode";
 import { convertDurationToTimeString } from "./convertDurationToTimeString";
 
 export function formatEpisodes(data) {
