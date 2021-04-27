@@ -2,6 +2,7 @@ import { GetStaticProps } from "next";
 import Image from "next/image";
 import { api } from "../services/api";
 import { formatEpisodes } from "../utils/formatEpisodes";
+import Link from "next/link";
 import styles from "./home.module.scss";
 
 export type Episodes = {
@@ -38,7 +39,7 @@ export default function Home(props: HomeProps) {
               <li key={episode.id}>
                 <div className={styles.content}>
                   <div className={styles.thumbnail}>
-                    <a href="">
+                    <Link href={`/episodes/${episode.id}`}>
                       <Image
                         width={192}
                         height={192}
@@ -46,11 +47,14 @@ export default function Home(props: HomeProps) {
                         alt={episode.title}
                         objectFit="cover"
                       />
-                    </a>
+                    </Link>
                   </div>
 
                   <div className={styles.episodeDetails}>
-                    <a href="">{episode.title}</a>
+                    <Link href={`/episodes/${episode.id}`}>
+                      <a>{episode.title}</a>
+                    </Link>
+
                     <p className={styles.members}>{episode.members}</p>
 
                     <div className={styles.moreInfo}>
@@ -77,12 +81,14 @@ export default function Home(props: HomeProps) {
 
         <table cellSpacing={8}>
           <thead>
-            <th></th>
-            <th>Podcast</th>
-            <th>Integrantes</th>
-            <th>Data</th>
-            <th>Duração</th>
-            <th></th>
+            <tr>
+              <th></th>
+              <th>Podcast</th>
+              <th>Integrantes</th>
+              <th>Data</th>
+              <th>Duração</th>
+              <th></th>
+            </tr>
           </thead>
           <tbody>
             {props.allEpisodes.map((episode) => {
@@ -90,7 +96,7 @@ export default function Home(props: HomeProps) {
                 <tr key={episode.id}>
                   <td style={{ width: 72 }}>
                     <div className={styles.thumbnail}>
-                      <a href="">
+                      <Link href={`/episodes/${episode.id}`}>
                         <Image
                           width={192}
                           height={192}
@@ -98,12 +104,14 @@ export default function Home(props: HomeProps) {
                           alt={episode.title}
                           objectFit="cover"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </td>
 
                   <td>
-                    <a href="">{episode.title}</a>
+                    <Link href={`/episodes/${episode.id}`}>
+                      <a>{episode.title}</a>
+                    </Link>
                   </td>
                   <td>{episode.members}</td>
                   <td style={{ width: 100 }}>
