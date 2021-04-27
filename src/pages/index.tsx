@@ -88,7 +88,7 @@ export default function Home(props: HomeProps) {
             {props.allEpisodes.map((episode) => {
               return (
                 <tr key={episode.id}>
-                  <td>
+                  <td style={{ width: 72 }}>
                     <div className={styles.thumbnail}>
                       <a href="">
                         <Image
@@ -106,7 +106,9 @@ export default function Home(props: HomeProps) {
                     <a href="">{episode.title}</a>
                   </td>
                   <td>{episode.members}</td>
-                  <td>{episode.published_at_formated}</td>
+                  <td style={{ width: 100 }}>
+                    {episode.published_at_formated}
+                  </td>
                   <td>{episode.file.duration_formated}</td>
                   <td>
                     <button type="button">
