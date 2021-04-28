@@ -4,7 +4,9 @@ import { api } from "../services/api";
 import { formatEpisodes } from "../utils/formatEpisodes";
 import Link from "next/link";
 import styles from "./home.module.scss";
-import { Episodes } from "../types/episode";
+import { Episodes } from "../types/episodeType";
+import { useContext } from "react";
+import { PlayerContext } from "../contexts/PlayerContext";
 
 type HomeProps = {
   latestEpisodes: Array<Episodes>;
@@ -13,6 +15,8 @@ type HomeProps = {
 };
 
 export default function Home(props: HomeProps) {
+  const { playFunction } = useContext(PlayerContext);
+
   return (
     <div className={styles.homePage}>
       <section className={styles.latestEpisodes}>
@@ -51,7 +55,7 @@ export default function Home(props: HomeProps) {
                 </div>
 
                 <div className="action">
-                  <button type="button">
+                  <button type="button" onClick={() => playFunction(episode)}>
                     <img src="/play-green.svg" alt="Tocar episódio" />
                   </button>
                 </div>
@@ -104,7 +108,7 @@ export default function Home(props: HomeProps) {
                   </td>
                   <td>{episode.file.duration_formated}</td>
                   <td>
-                    <button type="button">
+                    <button type="button" onClick={() => playFunction(episode)}>
                       <img src="/play-green.svg" alt="Tocar episódio" />
                     </button>
                   </td>

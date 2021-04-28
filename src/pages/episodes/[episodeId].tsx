@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { api } from "../../services/api";
-import { Episodes } from "../../types/episode";
+import { Episodes } from "../../types/episodeType";
 import { formatEpisodes } from "../../utils/formatEpisodes";
 import Image from "next/image";
 import Link from "next/link";
@@ -56,8 +56,24 @@ export default function Episode({ episode }: EpisodePageProps) {
   a tag abaixo.
 */
 export const getStaticPaths: GetStaticPaths = async () => {
+  const { data } = await api.get("/episodes", {
+    params: {
+      _limit: 3,
+      _sort: "publishe_at",
+      _order: "desc",
+    },
+  });
+
+  const paths = data.map((episode: Episodes) => {
+    return {
+      params: {
+        episodeId: episode.id,
+      },
+    };
+  });
+
   return {
-    paths: [],
+    paths,
     fallback: "blocking",
   };
 };
