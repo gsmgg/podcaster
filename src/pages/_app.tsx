@@ -21,6 +21,10 @@ function MyApp({ Component, pageProps }) {
     setIsPlaying(!isPlaying);
   }
 
+  function setPlayingState(state) {
+    setIsPlaying(state);
+  }
+
   return (
     <>
       <PlayerContext.Provider
@@ -30,6 +34,7 @@ function MyApp({ Component, pageProps }) {
           isPlaying,
           playFunction,
           togglePlayFunction,
+          setPlayingState,
         }}
       >
         <div className={styles.wrapper}>

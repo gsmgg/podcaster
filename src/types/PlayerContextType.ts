@@ -14,4 +14,5 @@ export type PlayerContextData = {
     isPlaying: boolean;
     playFunction: (episode: Episode) => void;
     togglePlayFunction: () => void;
+    setPlayingState: (state: boolean) => void;
 }
