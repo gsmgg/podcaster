@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
+import { useContext } from "react";
 import { useRouter } from "next/router";
 import { api } from "../../services/api";
 import { Episodes } from "../../types/episodeType";
@@ -6,6 +7,7 @@ import { formatEpisodes } from "../../utils/formatEpisodes";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./episode.module.scss";
+import { PlayerContext } from "../../contexts/PlayerContext";
 
 type EpisodePageProps = {
   episode: Episodes;
@@ -13,6 +15,8 @@ type EpisodePageProps = {
 
 export default function Episode({ episode }: EpisodePageProps) {
   const router = useRouter();
+
+  const { playFunction } = useContext(PlayerContext);
 
   return (
     <>
@@ -25,7 +29,7 @@ export default function Episode({ episode }: EpisodePageProps) {
             src={episode.thumbnail}
             objectFit="cover"
           ></Image>
-          <button type="button">
+          <button type="button" onClick={() => playFunction(episode)}>
             <img src="/play.svg" alt="Tocar episódio" />
           </button>
         </div>
