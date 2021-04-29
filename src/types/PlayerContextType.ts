@@ -21,4 +21,5 @@ export type PlayerContextData = {
     hasNext: boolean;
     hasPrevious: boolean;
     playerControls: (action: string) => void;
+    clearPlayerState: () => void;
 }

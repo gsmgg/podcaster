@@ -45,7 +45,12 @@ export function PlayerContextProvider({ children }: PlayerContextProvider) {
     setIsPlaying(state);
   }
 
-  const hasNext = currentEpisodeIndex > 0;
+  function clearPlayerState() {
+    setEpisodeList([]);
+    setCurrentEpisodeIndex(0);
+  }
+
+  const hasNext = isShuffling || currentEpisodeIndex > 0;
   const hasPrevious = episodeList.length > currentEpisodeIndex + 1;
 
   function playerControls(action: string) {
@@ -94,6 +99,7 @@ export function PlayerContextProvider({ children }: PlayerContextProvider) {
         hasNext,
         hasPrevious,
         playerControls,
+        clearPlayerState,
       }}
     >
       {children}
