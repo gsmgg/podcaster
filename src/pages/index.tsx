@@ -149,7 +149,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      latestEpisodes: formatEpisodes(latestEpisodes.data),
+      latestEpisodes: formatEpisodes([latestEpisodes.data[0]]),
       allEpisodes: formatEpisodes(allEpisodes.data),
     },
     revalidate: 60 * 60 * 8,
