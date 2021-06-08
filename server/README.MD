@@ -1,17 +1,17 @@
 # Mock server
 
-Decidi disponibilizar o código que roda na insfraestrutura do infraestrutura do [Cake Server](https://cake-server.vercel.app/) referente ao projeto Podcaster, para fortalecer a proposta educativa.
+Decidi disponibilizar o código da simulação de API do projeto podecaster que roda na insfraestrutura do [Cake Server](https://cake-server.vercel.app/), para fortalecer a proposta educativa.
 
 > **Importante!**
-> Essa sessão é apenas um exemplo do código que, efetivamente, roda no servidor de simulação, servindo apenas para teor de consulta e/ou curiosidade;
+> Essa sessão é apenas um exemplo do código que, efetivamente, roda no servidor de simulação. Assim, sua utilização é serve apenas para teor de consulta e/ou curiosidade;
 
 <br/>
 
 ## Tecnologia
 
-O Cake Server é uma infraestrutura baseada em núvem, **não pública** de uso majoritariamente pessoal. Seguindo uma lógica de auto gerenciamento, o serviço é ospedada pela [Vercel](https://vercel.com/) e seu código é escrito em TypeScript (portanto js) e aproveita-se do maravilhoso sistema de rotas de API do NextJS.
+O Cake Server é uma infraestrutura baseada em núvem, **não pública** de uso majoritariamente pessoal. Seguindo uma lógica de auto gerenciamento, o serviço é hospedada pela [Vercel](https://vercel.com/) e seu código é escrito em TypeScript (portanto js) e aproveita o maravilhoso sistema de rotas de API do NextJS.
 
-> O Cake Server é o responsável por prover os mocks desta aplicação
+> O Cake Server é o responsável por prover os mocks desta aplicação.
 
 <br/>
 

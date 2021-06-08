@@ -23,11 +23,12 @@ Ou, então, confira a demonstração da aplicação em [https://podecaster.verce
 
 ## Metas
 
-O projeto já passou por uma série de modificações desde o projeto original do NLW, mas ainda não atingiu seu completo potencial. Infelizmente, devido a questões de tempo, outros projetos foram colocados em prioridade, mas fica aqui a promessa de dias melhores (@JotaQuest) e melhorias no projeto:
+O projeto já passou por uma série de modificações desde sua versão original do NLW, mas ainda não atingiu seu completo potencial. Infelizmente, devido a questões de tempo, outros projetos foram colocados em prioridade, mas fica aqui a promessa de dias melhores (@JotaQuest) em relação à melhorias no projeto:
 
 - Sistema de gerenciamento administrativo (postar novos podcasts e tals);
 - Responsividade como padrão (atualmente, o projeto passa por problemas de responsividade do player);
 - Algumas correções de estilo;
+- Desenvolviemento detalhado de técnicas de SEO;
 
 ```bash
 ! Quando batermos a meta, dobramos a meta
@@ -37,9 +38,10 @@ O projeto já passou por uma série de modificações desde o projeto original d
 
 ## Proposta educativa
 
-Embora o projeto não seja "praticamente perfeito" no estilo Mary Poppins, ele conta com uma série de atributos educativos, que mostra o poder do reac e a potencialidade do nextjs, explorando conceitos como geração estática e dinâmica, técnicas de seo, acessibilidade em CSS, dentre outros aspectos.
+Embora o projeto não seja "praticamente perfeito" no estilo Mary Poppins, ele conta com uma série de atributos educativos, que mostra o poder do react e a potencialidade do nextjs, explorando conceitos como geração estática e dinâmica, técnicas de SEO, acessibilidade em CSS, dentre outros aspectos.
 
 <br/>
+
 ## Ajude a melhora-lo
 
 Como apontado, esse é um projeto com fundamento educativo e, portanto, ficarei feliz caso você também queira botar a mão na massa e brincar um pouco com o NextJS —Sem estresse, apenas de um fork no projeto e divirta-se!
@@ -48,4 +50,4 @@ Entretando, nada impede do projeto ser utilizado no mundo real. Isso é, caso vo
 
 <br/><br/><br/>
 
-Feito por carinho (e café) por Gustavo Simões <gustavosimoesmendonca@gmail.com>
+Feito com carinho (e café) por Gustavo Simões <gustavosimoesmendonca@gmail.com>
