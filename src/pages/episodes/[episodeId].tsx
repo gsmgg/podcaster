@@ -60,7 +60,7 @@ export default function Episode({ episode }: EpisodePageProps) {
   a tag abaixo.
 */
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await api.get("/episodes", {
+  const { data } = await api.get("/podecaster", {
     params: {
       _limit: 3,
       _sort: "publishe_at",
@@ -85,7 +85,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const { episodeId } = ctx.params;
 
-  const { data } = await api.get(`/episodes/${episodeId}`);
+  const { data } = await api.get(`/podecaster/${episodeId}`);
 
   const episodeData = formatEpisodes([data]);
   const episode = episodeData[0];

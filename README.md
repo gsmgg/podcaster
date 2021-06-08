@@ -1,34 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Podcaster
 
-## Getting Started
+O melhor para você ouvir, (quase) sempre no aplicativo web Podcaster.
 
-First, run the development server:
+O projeto foi desenvolvido na [NLW Brasil](https://nextlevelweek.com/inscricao/6), um evento de programação fornecido pela [rocketseat](https://rocketseat.com.br/).
+
+## Tecnologia
+
+Baseado em NextJS (e, portanto, React), e utilizando a infraestrutura do [Cake Server](https://cake-server.vercel.app/), o app usa método de geração de conteúdo estático, adequando-se a práticas modernas de SEO.
+
+## Desenvolvimento
+
+Execute
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+rodar a aplicação e, então, a aplicação estará disponível em [http://localhost:3000](http://localhost:3000) no seu navegador favorito.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Metas
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+O projeto já passou por uma série de modificações desde o projeto original do NLW, mas ainda não atingiu seu completo potencial. Infelizmente, devido a questões de tempo, outros projetos foram colocados em prioridade, mas fica aqui a promessa de dias melhores (@JotaQuest) e melhorias no projeto:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Sistema de gerenciamento administrativo (postar novos podcasts e tals);
+- Responsividade como padrão (atualmente, o projeto passa por problemas de responsividade do player);
+- Algumas correções de estilo;
 
-## Learn More
+```bash
+! Quando batermos a meta, dobramos a meta
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Proposta educativa
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Embora o projeto não seja "praticamente perfeito" no estilo Mary Poppins, ele conta com uma série de atributos educativos, que mostra o poder do reac e a potencialidade do nextjs, explorando conceitos como geração estática e dinâmica, técnicas de seo, acessibilidade em CSS, dentre outros aspectos.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Ajude a melhora-lo
 
-## Deploy on Vercel
+Como apontado, esse é um projeto com fundamento educativo e, portanto, ficarei feliz caso você também queira botar a mão na massa e brincar um pouco com o NextJS —Sem estresse, apenas de um fork no projeto e divirta-se!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Entretando, nada impede do projeto ser utilizado no mundo real. Isso é, caso você esteja começando o seu novo podcast de sucesso ou, então, é muito fã de um programa como esse, o Podcaster pode ser uma ótima alternativa para aumentar o engajemento do público e democratizar o acesso.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<br/><br/><br/>
+
+Feito por carinho (e café) por Gustavo Simões <gustavosimoesmendonca@gmail.com>
