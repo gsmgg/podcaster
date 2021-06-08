@@ -4,19 +4,22 @@ O melhor para você ouvir, (quase) sempre no aplicativo web Podcaster.
 
 O projeto foi desenvolvido na [NLW Brasil](https://nextlevelweek.com/inscricao/6), um evento de programação fornecido pela [rocketseat](https://rocketseat.com.br/).
 
+<br/>
+
 ## Tecnologia
 
 Baseado em NextJS (e, portanto, React), e utilizando a infraestrutura do [Cake Server](https://cake-server.vercel.app/), o app usa método de geração de conteúdo estático, adequando-se a práticas modernas de SEO.
 
-## Desenvolvimento
+<br/>
 
-Execute
+## Desenvolvimento e demo
 
-```bash
-npm run dev
-```
+Execute _npm run dev_ para rodar a aplicação e, então, acesse [http://localhost:3000](http://localhost:3000) no seu navegador favorito.
 
-rodar a aplicação e, então, a aplicação estará disponível em [http://localhost:3000](http://localhost:3000) no seu navegador favorito.
+Ou, então, confira a demonstração da aplicação em [https://podecaster.vercel.app/](https://podecaster.vercel.app/).
+
+<br/>
+<br/>
 
 ## Metas
 
@@ -30,10 +33,13 @@ O projeto já passou por uma série de modificações desde o projeto original d
 ! Quando batermos a meta, dobramos a meta
 ```
 
+<br/>
+
 ## Proposta educativa
 
 Embora o projeto não seja "praticamente perfeito" no estilo Mary Poppins, ele conta com uma série de atributos educativos, que mostra o poder do reac e a potencialidade do nextjs, explorando conceitos como geração estática e dinâmica, técnicas de seo, acessibilidade em CSS, dentre outros aspectos.
 
+<br/>
 ## Ajude a melhora-lo
 
 Como apontado, esse é um projeto com fundamento educativo e, portanto, ficarei feliz caso você também queira botar a mão na massa e brincar um pouco com o NextJS —Sem estresse, apenas de um fork no projeto e divirta-se!
