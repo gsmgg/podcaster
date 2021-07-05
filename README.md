@@ -1,8 +1,15 @@
+> 🇺🇸 &nbsp; Unfortunately, this project is not currently available in English, only in Brazilian Portuguese.
+<br/>
+
 # Podcaster
 
 O melhor para você ouvir, (quase) sempre no aplicativo web Podcaster.
 
 O projeto foi desenvolvido na [NLW Brasil](https://nextlevelweek.com/inscricao/6), um evento de programação fornecido pela [rocketseat](https://rocketseat.com.br/).
+
+<br/>
+
+![Demo App Screenshot](https://github.com/gsmgg/podcaster/blob/main/public/screenshot_demo.png)
 
 <br/>
  
@@ -12,7 +19,7 @@ Baseado em NextJS (e, portanto, React), e utilizando a infraestrutura do [Cake S
  
 <br/>
  
-## Desenvolvimento e demo
+## Desenvolvimento e demonstração
  
 Execute _npm run dev_ para rodar a aplicação e, então, acesse [http://localhost:3000](http://localhost:3000) no seu navegador favorito.
  
